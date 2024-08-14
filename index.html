@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catnip Café</title> <!-- Updated store name -->
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Welcome to Catnip Café</h1> <!-- Updated store name -->
+            <p>Your source for high-quality cat food to keep your feline friends healthy and happy!</p>
+        </header>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li> <!-- Navigation links -->
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <section class="banner-image">
+                <img src="images/banner-cat.png" alt="Welcome Banner"> <!-- Banner image on the home page -->
+            </section>
+
+            <section>
+                <h2>Featured Products</h2>
+                <p>Check out our best-selling cat food:</p>
+                <div class="product-preview">
+                    <img src="images/hills-7lb.jpg" alt="Hill's Science Diet - 7lb Bag"> <!-- Featured product image -->
+                    <p>Hill's Science Diet - 7lb Bag - $89.99</p>
+                    <a href="products.html" class="btn">Shop Now</a> <!-- Button to navigate to the products page -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; <span id="year"></span> Catnip Café</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById("year").innerText = new Date().getFullYear(); <!-- Script to update the year dynamically -->
+    </script>
+</body>
+</html>

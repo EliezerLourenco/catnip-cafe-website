@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Catnip Café</title> 
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Our Cat Food Products</h1>
+        </header>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li> <!-- Navigation links -->
+            </ul>
+        </nav>
+
+        <main id="app" class="main-content">
+            <section class="product-display">
+                <img :src="image" alt="Cat Food Image" :class="{ 'grayed-out-img': !inStock }"> <!-- Dynamic product image, dims if out of stock -->
+                <p v-if="!inStock" class="out-of-stock">Out of Stock</p> <!-- Display out of stock message if product is unavailable -->
+                <div class="cart">
+                    <p>Items in Cart: {{ cart }}</p> <!-- Display the number of items in the cart -->
+                </div>
+            </section>
+
+            <section class="product-options">
+                <h2>Choose Size</h2>
+                <div v-for="(option, index) in options" :key="option.id" @click="updateImage(index)" class="option">
+                    <p>{{ option.size }} - ${{ option.price }} - {{ option.quantity }} in stock</p> <!-- Display product options with stock information -->
+                </div>
+                <button @click="addToCart" :disabled="!inStock" class="btn btn-primary" :class="{ 'disabled-btn': !inStock }">Add to Cart</button>
+                <button @click="removeFromCart" class="btn btn-secondary">Remove from Cart</button> <!-- Buttons for adding/removing products from the cart -->
+            </section>
+
+            <!-- Review Form Section -->
+            <section class="review-section">
+                <h2>Leave a Review</h2>
+                <form @submit.prevent="submitReview"> <!-- Prevent default form submission -->
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" v-model="reviewName" required>
+
+                    <label for="review">Review:</label>
+                    <textarea id="review" v-model="reviewText" rows="4" required></textarea>
+
+                    <label for="rating">Rating:</label>
+                    <select id="rating" v-model="reviewRating" required>
+                        <option disabled value="">Select a rating</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option> <!-- Rating options -->
+                    </select>
+
+                    <button type="submit" class="btn">Submit</button> <!-- Submit button for the review form -->
+                </form>
+
+                <!-- Display Submitted Reviews -->
+                <div v-if="reviews.length" class="submitted-reviews">
+                    <h3>Customer Reviews</h3>
+                    <ul>
+                        <li v-for="(review, index) in reviews" :key="index">
+                            <p><strong>{{ review.name }}</strong> ({{ review.rating }} stars)</p>
+                            <p>{{ review.text }}</p> <!-- Display each review -->
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; <span id="year"></span> Catnip Café | <a href="contact.html">Contact Us</a></p>
+        </footer>
+    </div>
+
+    <!-- Load Vue.js from the locally installed node_modules -->
+    <script src="node_modules/vue/dist/vue.global.js"></script>
+    <!-- Link to the main.js file where Vue is initialized -->
+    <script src="main.js"></script>
+</body>
+</html>

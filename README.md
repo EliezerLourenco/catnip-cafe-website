@@ -21,19 +21,23 @@ Welcome to the **Catnip Café** project repository! This project is a website fo
    ```bash
    git clone https://github.com/yourusername/catnip-cafe.git
 
-## Navigate to the project directory:
+Navigate to the project directory:
 cd catnip-cafe
 Open the project in your preferred code editor.
 
-## Run the website:
+Run the website:
 You can use a live server extension (like the one in VS Code) or open the index.html file directly in your web browser.
 
 ## Usage
 Homepage: Browse the featured products and learn about the store.
+
 Products Page: Add items to your cart and see real-time stock updates.
+
 Contact Page: Submit inquiries or feedback through the contact form.
+
 Reviews Section: Leave and view customer reviews for products.
-Contributing
+
+## Contributing
 If you'd like to contribute to this project, feel free to fork the repository and submit a pull request. Please ensure that your contributions align with the project's style and structure.
 
 ## License

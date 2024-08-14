@@ -21,11 +21,13 @@ Welcome to the **Catnip Café** project repository! This project is a website fo
    ```bash
    git clone https://github.com/yourusername/catnip-cafe.git
 
-Navigate to the project directory:
+2. Navigate to the project directory:
+```bash
 cd catnip-cafe
-Open the project in your preferred code editor.
+```
+3. Open the project in your preferred code editor.
 
-Run the website:
+4. Run the website:
 You can use a live server extension (like the one in VS Code) or open the index.html file directly in your web browser.
 
 ## Usage

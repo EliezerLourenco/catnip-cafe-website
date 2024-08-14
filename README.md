@@ -20,11 +20,12 @@ Welcome to the **Catnip Café** project repository! This project is a website fo
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/yourusername/catnip-cafe.git
+   ```
 
 2. Navigate to the project directory:
-```bash
+   ```bash
    cd catnip-cafe
-```
+   ```
 3. Open the project in your preferred code editor.
 
 4. Run the website:

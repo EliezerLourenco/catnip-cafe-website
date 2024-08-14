@@ -23,7 +23,7 @@ Welcome to the **Catnip Café** project repository! This project is a website fo
 
 2. Navigate to the project directory:
 ```bash
-cd catnip-cafe
+   cd catnip-cafe
 ```
 3. Open the project in your preferred code editor.
 
